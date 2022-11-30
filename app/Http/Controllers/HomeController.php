@@ -15,4 +15,12 @@ class HomeController extends Controller
         return view('halaman.index', compact('produks', 'kategori'));
 
     }
+
+    public function showprofil(){
+        return view('halaman.profil');
+    }
+
+    public function showabout(){
+        return view('halaman.about');
+    }
 }

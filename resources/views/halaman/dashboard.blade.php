@@ -4,7 +4,7 @@
 <p>halaman dashboard ini</p>
 <h4>Selamat Datang <b id="username"><?php echo (Auth::user()->name) ?></b>, Anda Login sebagai <b>{{Auth::user()->level}}</b>.</h4>
 <div class="container mt-5 w-50">
-    <h1 class="text-center">prodok</h1>
+    <h1 class="text-center">Produk</h1>
     <a href="{{ route('addproduk') }}" class="btn btn-success mb-3">Create Data</a>
     <div class="card-body">
         <table class="table">

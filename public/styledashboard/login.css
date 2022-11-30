@@ -1,0 +1,95 @@
+login css
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-size: cover;
+    position: fixed;
+}
+
+.container2{
+    color:  #ffff;
+
+}
+
+.container2 h1{
+    color:  rgb(26, 196, 100);
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 70px;
+}
+
+.gambar2{
+    position: absolute;
+    width: 650px;
+    height: 570px;
+    left: 640px;
+    top: 0px;
+
+    background: #173F36;
+    box-shadow: -12px 8px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+
+.mb-6{
+    position: absolute;
+    width: 360px;
+    height: 45px;
+    left: 120px;
+    top: 200px;
+}
+
+.mb-7{
+    position: absolute;
+    width: 360px;
+    height: 45px;
+    left: 120px;
+    top: 270px;
+}
+
+.mb-8{
+    position: absolute;
+    width: 360px;
+    height: 45px;
+    left: 120px;
+    top: 240px;
+}
+
+.btn-primary2{
+    position: absolute;
+    width: 360px;
+    height: 50px;
+    left: 0px;
+    top: 160px;
+    background: #3E6D9C;
+    border-radius: 16px;
+}
+
+.text-center2{
+    position: absolute;
+    width: 295px;
+    height: 23px;
+    left: 120px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 23px;
+}
+
+.form-controll{
+    color: #ffff;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+img {
+    width: 76%;
+    margin-top: -20px;
+    margin-left: 60px;
+}

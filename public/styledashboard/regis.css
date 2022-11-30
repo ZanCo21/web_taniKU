@@ -1,0 +1,121 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-size: cover;
+}
+
+img {
+    width: 200px;
+    margin-left: 100px;
+    background-size: cover;
+}
+
+.container{
+    color:  rgb(26, 196, 100);
+}
+
+.container h1{
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.gambar{
+    position: absolute;
+    width: 650px;
+    height: 569px;
+    left: 630px;
+    top: 0px;
+
+    background: #173F36;
+    box-shadow: -12px 8px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+
+.mb-1{
+    position: absolute;
+    width: 360px;
+    height: 45px;
+    left: 120px;
+    top: 80px;
+}
+
+.mb-2{
+    position: absolute;
+    width: 360px;
+    height: 45px;
+    left: 120px;
+    top: 150px;
+}
+
+.mb-3{
+    position: absolute;
+    width: 360px;
+    height: 45px;
+    left: 120px;
+    top: 220px;
+}
+
+.mb-4{
+    position: absolute;
+    width: 360px;
+    height: 51px;
+    left: 120px;
+    top: 290px;
+}
+
+.mb-5{
+    position: absolute;
+    width: 360px;
+    height: 51px;
+    left: 120px;
+    top: 360px;
+}
+
+.mb-6{
+    position: absolute;
+    width: 360px;
+    height: 45px;
+    left: 0px;
+    top: 70px; 
+}
+.btn-primary{
+    position: absolute;
+    width: 360px;
+    height: 50px;
+    left: 120px;
+    top: 410px;
+    background: #3E6D9C;
+    border-radius: 16px;
+}
+
+.text-center{
+    position: absolute;
+    width: 295px;
+    height: 23px;
+    left: 120px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 23px;
+}
+
+.form-control1{
+    color: #ffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    width: 36%;
+    margin-top: -20px;
+    margin-left: 60px;
+}
+
+.btn-danger{
+    top: 410px;
+}

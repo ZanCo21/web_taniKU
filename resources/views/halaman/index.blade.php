@@ -69,7 +69,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $isi->name_produk }}</h5>
                             <strong style="font-size: 20px;">IDR :</strong>
-                            <span style="font-weig  ht: 100; font-size: 20px" class="ms-2">{{ $isi->harga }}/kg</span>
+                            <span style="font-weight: 100; font-size: 20px" class="ms-2">{{ $isi->harga }}/kg</span>
                             <p class="card-text mt-2">{{ $isi->short_description }}</p>
                             </a>
                             @if (Auth::user())

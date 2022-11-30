@@ -1,0 +1,57 @@
+img{
+    width: 30%;
+    height: 30%;
+    left: 80px;
+    border-radius: 10px;
+}
+
+.teks{
+    margin-left: 500px;
+    margin-top: -300px;
+}
+
+.nama{
+    margin-left: 200px;
+    margin-top: -40px;
+}
+
+.date{
+    margin-left: 200px;
+    margin-top: -40px;
+    color: rgb(14, 184, 14);
+}
+
+.jenis{
+    margin-left: 200px;
+    margin-top: -40px;
+    color: rgb(14, 184, 14);
+}
+
+.kontak{
+    margin-left: 500px;
+}
+
+.email{
+    margin-left: 200px;
+    margin-top: -40px;
+}
+
+.number{
+    margin-left: 200px;
+    margin-top: -40px;
+    color: rgb(14, 184, 14);
+}
+
+.btn-primary3{
+    width: 120px;
+    height: 36px;
+    top: 410px;
+    background: #C53636;
+    border-radius: 10px;
+    color: white;
+} 
+
+.mb-10{
+    margin-left: 800px;
+    margin-top: 30px;
+}

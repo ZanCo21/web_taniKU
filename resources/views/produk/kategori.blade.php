@@ -1,6 +1,5 @@
 @extends('index_master')
 @section('konten') 
-
   <div class="container mt-5 d-flex div1">
       <div class="flex-column card col-lg-2 ps-4 pt-2">
         {{-- @foreach ($kategori as $item)

@@ -79,6 +79,14 @@ Route::middleware(['auth'])->group(function () {
 
 Route::post('delete-cart-item', [CartController::class, 'deletecart']);
 
+// profil
+Route::get('profil', [HomeController::class, 'showprofil']);
+
+// about
+Route::get('about', [HomeController::class, 'showabout']);
+
+
+
 
 // kategori
 // route::get('kategori','KategoriController@index')->name('kategori');
