@@ -46,6 +46,7 @@ class ProdukPageController extends Controller
 
     public function detailproduk($id){
         $produkss = Produk::where('id', $id)->first();
+        // d
 
         return view('produk.detail', compact('produkss'));
     }

@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class DetailController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     public function detailproduk($id){
         $barang = Produk::where('id', $id)->first();

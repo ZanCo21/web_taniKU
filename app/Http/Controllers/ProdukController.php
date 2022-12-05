@@ -28,6 +28,7 @@ class ProdukController extends Controller
     public function create()
     {
         $kategori = Kategori::orderBy('name','ASC')->get();
+        // d
 
         $this->data['kategori'] = $kategori->toArray();
         $this->data['produk'] = null;

@@ -14,6 +14,7 @@ class CartController extends Controller
         $product_id = $request->input('product_id');
         $product_stok = $request->input('product_stok');
 
+        // memeriksa pengguna ::check
         if(Auth::check())
         {
             $prod_check = Produk::where('id',$product_id)->first();
@@ -47,6 +48,26 @@ class CartController extends Controller
         $cartitem = Cart::where('user_id', Auth::id())->get();
 
         return view('halaman.cart', compact('cartitem'));
+    }
+
+    public function updatecart(Request $request)
+    {
+        $prod_id = $request->input('prod_id');
+        $qty = $request->input('qty');
+
+        if(Auth::check()) 
+        {
+            if(Cart::where('prod_id', $prod_id)->where('user_id', Auth::id())->exists())
+            {
+                $cart = Cart::where('prod_id', $prod_id)->where('user_id', Auth::id())->first();
+                $cart->prod_stok = $qty;
+                $cart->update();
+                return response()->json(['status'=> "Quantityupdated"]);
+            }
+
+            
+        }
+
     }
 
     public function deletecart(Request $request)
