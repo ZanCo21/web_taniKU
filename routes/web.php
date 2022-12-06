@@ -9,6 +9,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\ProdukPageController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,25 +66,33 @@ Route::get('/Artikel-kategori/{slug}', [ProdukPageController::class, 'showKatego
 
 // detailproduk
 // Route::get('/detail-produk/{id}', [ProdukPageController::class, 'detailproduk'])->name('detail-produk');
+Route::middleware(['auth'])->group(function () {
 Route::get('/detail-produk/{id}', [DetailController::class, 'detailproduk'])->name('detail.produk');
+});
 
 
 // cart
 Route::middleware(['auth'])->group(function () {
     Route::post('add-to-cart', [CartController::class, 'addProduct']);
 });
-
 Route::middleware(['auth'])->group(function () {
     Route::get('cart', [CartController::class, 'viewcart']);
 });
-
 Route::post('delete-cart-item', [CartController::class, 'deletecart']);
+Route::post('update-cart', [CartController::class, 'updatecart']);
+
 
 // profil
 Route::get('profil', [HomeController::class, 'showprofil']);
 
 // about
 Route::get('about', [HomeController::class, 'showabout']);
+
+// checkout
+Route::middleware(['auth'])->group(function () {
+Route::get('checkout', [CheckoutController::class, 'index']);
+});
+
 
 
 

@@ -68,7 +68,7 @@
     </div>
 
     {{-- fotter --}}
-    <div class="mt-5" style="background-color: #173F36; height: 200px; width: 100%; text-align: center;">
+    <div class="mt-5 m" style="background-color: #173F36; height: 200px; width: 100%; text-align: center;">
       <br>
       <div class="pt-5">
       <i class="fa-brands fa-instagram me-2" style="color: #fff;"></i>

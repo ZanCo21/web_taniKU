@@ -22,23 +22,31 @@
                             <br>
                             <h3>Harga : <span style="font-weight: 100">{{ $barang->harga }}/kg</span></h3>
                             <br>
-                            <h3>Stok : <span style="font-weight: 100; font-size:px; " >{{ $barang->stok}}/kg</span></h3>
+                            @if ($barang->stok == 1)
+                                <label class="badge bg-danger">Stock Only 1 !!</label>
+                            @endif
+                            @if ($barang->stok > 0)
+                                <label class="badge bg-success">In stock</label>
+                            @else
+                                <label class="badge bg-danger">Out of stock</label>
+                            @endif
+                            {{-- <h3>Stok : <span style="font-weight: 100; font-size:px; " >{{ $barang->stok}}/kg</span></h3> --}}
                             <br>
                             <p>{{ $barang->description }}</p>
                             <form id='myform' method='' class='quantity' action='#'>
                                 <input type="hidden" value="{{ $barang->id }}" class="prod_id">
-                                <input type='button' value='-' class='qtyminus minus' field='quantity' />
+                                <input type='button' value='-' class='qtyminus minus decrement-btn' field='quantity' />
                                 <input type='text' name='quantity' value='1' class='qty' min="1"/>
-                                <input type='button' value='+' class='qtyplus plus' field='quantity' /><span style="font-size: 20px;">  /Kg</span>
+                                <input type='button' value='+' class='qtyplus plus increment-btn' field='quantity' /><span style="font-size: 20px;">  /Kg</span>
                             </form>
                         </div>
                         
                     </div>
                     <div class="float-end">
-                        @if (Auth::user())
+                        @if ($barang->stok > 0)
                         <a href="#" class="btn btn-success addToCartBtn mt-3">Add to Cart</a>
                         @else
-                        <a href="/login" class="btn btn-danger mt-3">Add to Cart</a>
+                        <a href="#" class="btn btn-danger mt-3">Sold out</a>
                         @endif
                     </div>
             </div>
