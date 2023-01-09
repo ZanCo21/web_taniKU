@@ -94,6 +94,10 @@ Route::get('checkout', [CheckoutController::class, 'index']);
 });
 
 
+// getprovince
+Route::get('province', [CheckoutController::class, 'get_province'])->name('province');
+Route::get('/kota/{id}', [CheckoutController::class, 'get_kota'])->name('kota');
+Route::get('/origin={city_origin}&destination={city_destination}&weight={weight}&courier={courier}',[CheckoutController::class, 'get_ongkir']);
 
 
 

@@ -23,6 +23,12 @@ class User extends Authenticatable
         'level',
         'email',
         'password',
+        'phone', 
+        'address1', 
+        'address2', 
+        'province_id', 
+        'city_id', 
+        'postcode',
     ];
 
     protected $table = 'user';
