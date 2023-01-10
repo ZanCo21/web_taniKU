@@ -19,6 +19,7 @@ class Produk extends Model
         'short_description',
         'description',
         'stok',
+        'weight',
     ];
 
     public function kategoris()
