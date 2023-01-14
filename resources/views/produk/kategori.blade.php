@@ -12,9 +12,9 @@
           <h2 class="text-start">{{ $kategori->nama_kategori }}</h2>
             @foreach ($products as $isi)
 
-            <div class="col-md-4 ms-2 mb-2" style="width: 18rem;">
+            <div class="col-md-4 ms-2 mb-2" style="width: 18rem; border: 1px solid black; border-radius: 10px;">
                         <a href="{{ route('detail.produk',$isi->id) }}">
-                        <img src="{{ asset('img/'. $isi->image) }}" class="card-img-top" alt="...">
+                        <img src="{{ asset('img/'. $isi->image) }}" height="180px" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ $isi->name_produk }}</h5>
                             <strong style="font-size: 20px;">IDR :</strong>

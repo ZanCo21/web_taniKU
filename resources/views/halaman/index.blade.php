@@ -4,66 +4,36 @@
     {{-- @if (Auth::user())
     <h4>Selamat Datang <b id="username">{{Auth::user()->name}}</b></h4>
     @endif --}}
- <div class="d-flex banner">   
-        <!-- img slider start -->
-    <div class="iklanlarge">   
-        <div class="slider">
-            <div class="slides">
-                <!-- radio button start -->
-                <input type="radio" name="radio-btn" id="radio1">
-                <input type="radio" name="radio-btn" id="radio2">
-                <input type="radio" name="radio-btn" id="radio3">
-                <input type="radio" name="radio-btn" id="radio4">
-                <!-- radio button end -->
-                <!-- slide image start -->
-                <div class="slide first">
-                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-OdKOq4MV3bA%2FXlpHt3WQPOI%2FAAAAAAAAAd8%2FFM4oMx5NIkQO5BukC4VeVJmCpIKXdS2lgCLcBGAsYHQ%2Fs1600%2FGettyImages-629562295-937x625.jpg&f=1&nofb=1&ipt=ac9306f03b7626954cf43f6a2eea1a0092cc8953c0617a34d1efe8d9709c3a63&ipo=images" alt="">
-                </div>
-                <div class="slide">
-                    <img src="https://media.istockphoto.com/id/95380001/id/foto/seorang-wanita-bekerja-di-memotong-beras.jpg?s=612x612&w=0&k=20&c=beKjC3CAL4VfWg06ujTxK_Q9ZrSzxjwuBmsbmJsS5h8=" alt="petani">
-                </div>
-                <div class="slide">
-                    <img src="https://media.istockphoto.com/id/1366791288/id/foto/di-rumah-kaca-seorang-petani-muda-asia-yang-cerdas-menggunakan-tablet-untuk-memantau-kualitas.jpg?s=612x612&w=0&k=20&c=nQvnIu7XryJ6zQybVFXEGsjPylw9NeqhMWnZuXh_kck=" alt="petani">
-                </div>
-                <div class="slide">
-                    <img src="https://media.istockphoto.com/id/1345932975/id/foto/petani-pasangan-asia-memanen-sayuran-hidroponik-segar-di-perkebunan-rumah-kaca.jpg?s=612x612&w=0&k=20&c=TfG78nd78RSmzHfwJCI7e14BtLp8ncAwVwLyQcC6RrY=" alt="petani">
-                </div>
-                <!-- slide image end -->
-                <!-- automatic navigations start -->
-                <div class="navitagion-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                    <div class="auto-btn4"></div>
-                </div>
-                <!-- automatic navigations end -->
-            </div>
-        </div>
-    </div> 
+<div class="gambar">
+<div class="text-hero mt-5">
+    <h2>Fresh Online <br> Store Shopping</h2>
+    <br>
+    <br>
+    <a href="#" style="background-color: whitesmoke;" class="btn addToCartBtn mt-3">View Product</a>
+</div>
+<img src="img/buahh.jpg" alt="">
+</div>
 
-    <div class="flex-column">
-        <div class="iklan">
-        <img src="https://primafreshmart.com/pub/media/banner/tmp/images/Banner_promo_November_PFM_desktop_1_.jpg" class="iklan1" alt="iklan 1">
-        </div>
-
-        <div class="iklan" style="margin-top: 14%;">
-            <img src="https://primafreshmart.com/pub/media/banner/tmp/images/Banner_promo_November_PFM_desktop_1_.jpg" class="iklan1" alt="iklan 1">
-        </div>
-    </div>  
- </div>
-
-
-<div class="container mt-5 d-flex div1">
-  <div class="flex-column card col-lg-2 ps-4 pt-2">
-    <h3>kategori</h3>
-      @foreach ($kategori as $item)
-      <br>
-      <a href="{{ route('artikel.kategori',$item->slug) }}"  class="kategori"><i class="fa-sharp fa-solid fa-box"></i>  {{$item->nama_kategori}}</a>
+<h4 class="mt-5" style="margin-left: 5vw; font-weight: bold;">Categories</h4>
+<div class="d-flex" style="margin-left: 5vw;">
+     @foreach ($kategori as $item)
+     <div style="background-image: url('img/kategoriindex.png'); background-position: center; background-repeat: no-repeat; padding: 20px; height: 140px; margin-right: 30px; border-radius: 10px;" class="mt-2">
+         <a href="{{ route('artikel.kategori',$item->slug) }}"  class="kategori" style="color: white; font-weight: bold;"> {{$item->nama_kategori}}</a>
+     </div>
       @endforeach
-  </div>
-  <div class="row justify-content-start ms-4">
-            @foreach ($produks as $isi)
-                    <div class="card col-md-3 ms-2 mb-2" style="width: 18rem;">
+</div>
+
+<h4 class="mt-5" style="margin-left: 5vw; font-weight: bold;">Flash Sale</h4>
+<div class="container ms-5">
+<div class="container d-flex div1">
+  <!-- <div class="flex-column card col-lg-2 ps-4 pt-2"> -->
+    <!-- <h3>kategori</h3> -->
+
+  <!-- </div> -->
+<!-- fs -->
+<div class="row justify-content-start">
+            @foreach ($flashsale as $isi)
+                    <div class="card col-md-3 ms-2 mb-4 mt-4" style="width: 16.4rem; border-radius: 10px; border-color: black;">
                         <a href="{{ route('detail.produk',$isi->id) }}">
                         <img src="{{ asset('img/'. $isi->image) }}" height="180px" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -81,5 +51,84 @@
                     </div>
             @endforeach
         </div>
+    </div>
+
 </div>
+</div>
+<center>
+<div style="position: absolute; z-index: 7; text-align: center; margin-left: 37%; margin-top: 140px; column-gap: 30px;">
+    <h3 style="color: white; font-weight:bolder;">Get 5% Cash Back</h3>
+    <br>
+    <button class="mb-5 mt-4 ps-5 pe-5 btn btn-light">Get</button>
+</div>
+</center>
+<div class="mt-4 mb-4">
+    <img src="img/carddisc.png" alt="" style=" margin-left: 5.4%; width: 85%;">
+
+</div>    
+
+
+<div class="container ms-5">
+<h4 class="mt-5 mb-4" style="font-weight: bold;">Best Product For You</h4>
+<div class="container d-flex div1">
+<div class="row justify-content-start">
+                @foreach ($produks as $isi)
+                        <div class="card col-md-4 ms-2 mb-4" style="width: 16.4rem; border-radius: 10px; border-color: black;">
+                            <a href="{{ route('detail.produk',$isi->id) }}">
+                            <img src="{{ asset('img/'. $isi->image) }}" height="180px" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $isi->name_produk }}</h5>
+                                <strong style="font-size: 20px;">IDR :</strong>
+                                <span style="font-weight: 100; font-size: 20px" class="ms-2">{{ $isi->harga }}/kg</span>
+                                <p class="card-text mt-2">{{ $isi->short_description }}</p>
+                                </a>
+                                @if (Auth::user())
+                                <a href="#" class="btn btn-success addToCartBtn mt-3">Add to Cart</a>
+                                @else
+                                <a href="/login" class="btn btn-danger mt-3">Add to Cart</a>
+                                @endif
+                            </div>
+                        </div>
+                @endforeach
+        </div>
+</div>
+</div>
+
+<div class="p-3 ">
+    <h4 class="mb-2 mt-2 ms-5" style="font-weight: bold; margin-left: 5vw;">Service to help you shop</h4>
+
+</div>
+<div class="cardd" style="display: flex;">
+<div class="card1" style="width: 330px; height: 378px; background-color:#9AC9D1; align-items:center; margin-left:5.4%;">
+    <div class="card-customerservice" style="margin-left:5.4%; padding-top:15px;">
+        <h4 style="font-weight: bold;">Frequently asked question</h4>
+        <p>safe & reliable shopping in our store</p>
+    </div>
+    <div class="gambar2" style="border-radius: 10px;">
+        <img style="width: 330px; height: 207px; margin-top: 70px;" src="img/cs.jpg" class="" alt="">
+    </div>
+</div>
+
+<div class="card2" style="width: 330px; height: 378px; background-color:#FFC61D; align-items:center; margin-left:5.4%;">
+    <div class="card-customerservice" style="margin-left:5.4%; padding-top:15px;">
+        <h4 style="font-weight: bold;">Online payment <br> method</h4>
+        <p>safe & reliable shopping in our store</p>
+    </div>
+    <div class="gambar3" style="border-radius: 10px;">
+        <img style="width: 330px; height: 207px; margin-top: 70px;" src="img/delivery.webp" class="" alt="">
+    </div>
+</div>
+
+<div class="card3" style="width: 330px; height: 378px; background-color:#FFC61D; align-items:center; margin-left:5.4%;">
+    <div class="card-customerservice" style="margin-left:5.4%; padding-top:15px;">
+        <h4 style="font-weight: bold;">Home delivery <br> option</h4>
+        <p>safe & reliable shopping in our store</p>
+    </div>
+    <div class="gambar4" style="border-radius: 10px;">
+        <img style="width: 330px; height: 207px; margin-top: 70px;" src="img/penyerahan.jpg" class="" alt="">
+    </div>
+</div>
+
+</div>
+
 @endsection

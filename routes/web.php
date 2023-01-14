@@ -54,6 +54,7 @@ Route::group(['middleware' => ['auth','ceklevel:user']], function() {
 // home
 Route::get('/', [HomeController::class, 'index'])->name('/');
 
+Route::get('/beranda', [BerandaController::class,'showberanda']);
 
 
 //produk
@@ -98,6 +99,11 @@ Route::get('checkout', [CheckoutController::class, 'index']);
 Route::get('province', [CheckoutController::class, 'get_province'])->name('province');
 Route::get('/kota/{id}', [CheckoutController::class, 'get_kota'])->name('kota');
 Route::get('/origin={city_origin}&destination={city_destination}&weight={weight}&courier={courier}',[CheckoutController::class, 'get_ongkir']);
+
+// admin dashboard
+Route::get('/dashboard/produk',[BerandaController::class, 'produk'])->name('produk');
+Route::get('/dashboard/kategori',[BerandaController::class, 'kategori'])->name('kategori');
+
 
 
 

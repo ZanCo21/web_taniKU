@@ -1,6 +1,6 @@
 @extends('index_master')
 @section('konten')
-<div class="col-md-12 mt-2 ms-2">
+<div class="col-md-12 mt-2 ms-5">
     <a href="{{ url('cart') }}" class="btn btn-danger mt-3">Back</a>
     <nav aria-label="breadcrumb" class="mt-2">
         <ol class="breadcrumb">

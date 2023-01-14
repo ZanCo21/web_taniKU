@@ -75,19 +75,19 @@ img {
     top: 360px;
 }
 
-.mb-6{
+.btn-danger{
     position: absolute;
-    width: 360px;
+    width: 60px;
     height: 45px;
-    left: 0px;
-    top: 70px; 
+    left: 500px;
+    top: 90px; 
 }
 .btn-primary{
     position: absolute;
     width: 360px;
     height: 50px;
     left: 120px;
-    top: 410px;
+    top: 470px;
     background: #3E6D9C;
     border-radius: 16px;
 }

@@ -11,8 +11,11 @@ class HomeController extends Controller
     public function index()
     {
         $produks = Produk::all();
+
+        $flashsale = Produk::latest()->paginate(4);
+
         $kategori = Kategori::all();
-        return view('halaman.index', compact('produks', 'kategori'));
+        return view('halaman.index', compact('produks', 'kategori', 'flashsale'));
 
     }
 

@@ -147,3 +147,23 @@ text-align: center;
 }
 input.qtyplus { width:25px; height:25px;}
 input.qtyminus { width:25px; height:25px;}
+
+.gambar img{
+  width: 100%;
+  height: 28vw;
+}
+
+.text-hero{
+  margin-left: 5.3%;
+  position: absolute;
+}
+
+.text-hero h2{
+  color: white;
+  font-weight: bolder;
+}
+
+
+.cardd{
+  color: white;
+}

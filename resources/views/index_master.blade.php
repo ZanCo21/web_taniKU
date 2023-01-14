@@ -60,7 +60,8 @@
   </div>
 </nav>
        
-    <div class="container ms-5">
+    <div class="">
+      <div>
         <div class="col-md-12">
           @yield('konten')
         </div>
