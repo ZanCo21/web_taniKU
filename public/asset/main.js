@@ -150,7 +150,7 @@ $(document).ready(function (){
         
     var namaprovinsi = $("#provinsi_id option:selected").attr("namaprovinsi");
     $("#nama_provinsi").val(namaprovinsi);
-    // kita buat variable provincedid untk menampung data id select province
+    // buat variable provincedid untk menampung data id select province
     let provinceid = $(this).val();
     //kita cek jika id di dpatkan maka apa yg akan kita eksekusi
     if(provinceid){
@@ -187,6 +187,19 @@ $(document).ready(function (){
         // menampilkan hasil nama provinsi ke input id nama_provinsi
         $("#nama_kota").val(namakotaku);
     });
+
+      // input type hidden layanan
+      $('select[name="layanan"]').on('change', function(){
+        // membuat variable namakotaku untyk mendapatkan atribut nama layanan
+        var namalayanan = $("#layanan option:selected").attr("description");
+        var namaetd = $("#layanan option:selected").attr("etd");
+        var namaharga = $("#layanan option:selected").attr("harga_ongkir");
+        var namaserv = $("#layanan option:selected").attr("service");
+
+
+        // menampilkan hasil nama provinsi ke input id nama_provinsi
+        $("#nama_layanan").val(namaserv + ", " +namalayanan +", " +namaetd + " day, " + "Rp." +namaharga);
+    });
         
 
     // get onkir
@@ -216,7 +229,7 @@ $(document).ready(function (){
             // silahkan pelajari cara menampilkan data json agar lebi paham
             $.each(value1.cost, function(key2, value2){
             // $('select[name="layanan"]').append('<option value="'+ key +'">' + value1.service + '-' + value1.description + '-' +value2.value+ '</option>');
-            $('select[name="layanan"]').append('<option value="'+ key +'" harga_ongkir="'+value2.value+'" service="'+value1.service+'">' + value1.service + '-' + value1.description + '-' +value2.value+ '</option>');
+            $('select[name="layanan"]').append('<option value="'+ key +'" harga_ongkir="'+value2.value+'" service="'+value1.service+'" etd="'+value2.etd+'" description="'+value1.description+'">' + value1.service + '-' + value1.description + ', Rp.' +value2.value+ ',' +value2.etd +" day " +'</option>');
             });
             });
             });
@@ -234,9 +247,10 @@ $(document).ready(function (){
             var harga_ongkir = $("#layanan option:selected").attr("harga_ongkir");
 
             $("#ongkos_kirim").val(harga_ongkir);
+            $("#ongkir").val(harga_ongkir);
 
             let total = parseInt(totalbelanja) + parseInt(harga_ongkir);
-            $("#total").val(total);
+            $("input[id=total]").val(total);
 
         });
 

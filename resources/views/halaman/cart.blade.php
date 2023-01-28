@@ -1,8 +1,6 @@
 @extends('index_master')
-
-
 @section('konten') 
-<div class="container ms-5">
+<div class="container">
     <div class="row product_data">
         <div class="col-md-12 mt-2 ms-2">
             <a href="{{ route('/') }}" class="btn btn-danger mt-3">Back</a>

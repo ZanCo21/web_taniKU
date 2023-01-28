@@ -54,7 +54,7 @@ class CheckoutController extends Controller
         } else {
             // ini kita decode data nya terlebih dahulu
             $response = json_decode($response, true);
-            // ini untuk mengambil data provinsi yang ada di dalam rajaongkir resul
+            // ambil data provinsi yang ada di dalam rajaongkir resul
             $data_pengirim = $response['rajaongkir']['results'];
             return $data_pengirim;
         }
