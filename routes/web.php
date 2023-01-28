@@ -10,6 +10,7 @@ use App\Http\Controllers\DetailController;
 use App\Http\Controllers\ProdukPageController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,6 +79,13 @@ Route::middleware(['auth'])->group(function () {
 });
 Route::middleware(['auth'])->group(function () {
     Route::get('cart', [CartController::class, 'viewcart']);
+
+    // pesanan
+    Route::get('pesanan', [HomeController::class, 'viewcart'])->name('pesanan');
+    Route::get('/pay/{id}', [HomeController::class, 'pay'])->name('pay');
+    
+    // pesanan page
+    Route::get('/pesanan-page', [HomeController::class, 'viewpesanan']);
 });
 Route::post('delete-cart-item', [CartController::class, 'deletecart']);
 Route::post('update-cart', [CartController::class, 'updatecart']);
@@ -94,6 +102,8 @@ Route::middleware(['auth'])->group(function () {
 Route::get('checkout', [CheckoutController::class, 'index']);
 });
 
+// action-checkout with midtrans
+Route::post('/order',[OrderController::class, 'checkout'])->name('order');
 
 // getprovince
 Route::get('province', [CheckoutController::class, 'get_province'])->name('province');
@@ -104,7 +114,11 @@ Route::get('/origin={city_origin}&destination={city_destination}&weight={weight}
 Route::get('/dashboard/produk',[BerandaController::class, 'produk'])->name('produk');
 Route::get('/dashboard/kategori',[BerandaController::class, 'kategori'])->name('kategori');
 
+// invoice
+Route::get('/invoice/{id}', [OrderController::class, 'invoice']);
 
+// // pesanan
+// Route::post('/midtrans-callback', [OrderController::class, 'callback']);
 
 
 // kategori
