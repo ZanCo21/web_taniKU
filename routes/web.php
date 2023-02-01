@@ -1,16 +1,19 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\authcontroller;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\DetailController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\BerandaController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\DetailController;
-use App\Http\Controllers\ProdukPageController;
-use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
-use App\Http\Controllers\OrderController;
+use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\ProdukPageController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +54,15 @@ Route::group(['middleware' => ['auth','ceklevel:user']], function() {
 
 });
 
+// authcontroller
+// github
+
+Route::get('/auth/github/redirect',[authcontroller::class,'githubredirect'])->name('githublogin');
+Route::get('/auth/github/callback',[authcontroller::class,'githubcallback']);
+
+// google
+Route::get('/auth/google/redirect',[authcontroller::class,'googleredirect'])->name('googlelogin');
+Route::get('/auth/google/callback',[authcontroller::class,'googlecallback']);
 
 // home
 Route::get('/', [HomeController::class, 'index'])->name('/');

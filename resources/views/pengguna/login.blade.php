@@ -29,9 +29,24 @@
             <div class="mb-8">
                 <button class="btn-primary2">Login</button>
             </div>
+            <div class="col-md-3">
+                <a class="btn btn-outline-dark" href="{{ route('githublogin') }}" role="button" style="text-transform:none">
+                  <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
+                  Login with Github
+                </a>
+              </div>
+
+              <div class="col-md-3">
+                <a class="btn btn-outline-dark" href="{{ route('googlelogin') }}" role="button" style="text-transform:none">
+                  <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                  Login with Google
+                </a>
+              </div>
+
+
             <div class="text-center2" style="margin-top: 360px">
             DON'T HAVE AN ACCOUNT? <a href="register">register</a>
-          </div>
+            </div>
         </form>
     </div>
 </div>
