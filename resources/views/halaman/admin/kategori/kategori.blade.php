@@ -7,7 +7,7 @@
         <div class="card">
           <div class="card-body">
             <h4 class="card-title">Data Kategori</h4>
-            <a href="" class="badge badge-outline-success">Add kategori</a>
+            <a href="{{ Route('addkategori') }}" class="badge badge-outline-success">Add kategori</a>
             {{-- <p class="card-description"> Add class  --}}
             </p>
             <div class="table-responsive">
@@ -27,8 +27,7 @@
               <td>{{ $row->nama_kategori }}</td>
               <td>{{ $row->slug }}</td>
               <td>
-                  <a href="" class="btn btn-success btn-sm">Edit</a>
-                  <button class="btn btn-danger btn-sm">Delet</button>
+                  <a href="/dashboard/kategori/delete/{{ $row->id }}" class="btn btn-danger btn-sm">Delete</a>
               </td>
                   </tr>
                   @endforeach

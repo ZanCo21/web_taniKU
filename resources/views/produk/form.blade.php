@@ -27,6 +27,10 @@
                         <input type="number" class="form-control" name="harga" id="harga" >
                     </div>
                     <div class="mb-3">
+                        <label for="nama" class="form-label">Weight *gram</label>
+                        <input type="number" class="form-control" name="weight" id="weight" >
+                    </div>
+                    <div class="mb-3">
                         <label for="jurusan" class="form-label">Short Description</label>
                         <input type="text" class="form-control" name="short_description" id="short_description" >
                     </div>

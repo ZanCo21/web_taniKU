@@ -35,4 +35,11 @@ class HomeController extends Controller
 
         return view('halaman.page_pesanan', compact('orders'));
     }
+
+    public function detailpesanan($id)
+    {
+        $pesanan = Order::where('id', $id)->first();
+
+        return view('halaman.pesanan.detail_pesanan', compact('pesanan'));
+    }
 }

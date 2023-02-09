@@ -6,8 +6,8 @@
       <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Data Guru</h4>
-            <a href="{{ route('addproduk') }}" class="badge badge-outline-success">Add Guru</a>
+            <h4 class="card-title">Data produk</h4>
+            <a href="{{ route('addproduk') }}" class="badge badge-outline-success">Add Produk</a>
             {{-- <p class="card-description"> Add class  --}}
             </p>
             <div class="table-responsive">
@@ -21,7 +21,7 @@
                 <th>Harga</th>
                 <th>stok</th>
                 <th>short Des</th>
-                <th>Des</th>
+                {{-- <th>Des</th> --}}
                 <th>Action</th>
                   </tr>
                 </thead>
@@ -37,11 +37,12 @@
               <th>{{ $isi->harga }}</th>
               <th>{{ $isi->stok }}</th>
               <th width="30px">{{ $isi->short_description }}</th>
-              <th>{{ $isi->description }}</th>
+              {{-- <th>{{ $isi->description }}</th> --}}
               <td></td>
               <td>
-                  <a href="" class="btn btn-success btn-sm">Edit</a>
-                  <button class="btn btn-danger btn-sm">Delet</button>
+                  <a href="{{ route('get.produk',$isi->id ) }}" class="btn btn-success btn-sm">Edit</a>
+                  {{-- <button class="btn btn-danger btn-sm">Delet</button> --}}
+                  <a href="/delete/produk/{{ $isi->id }}" class="badge badge-outline-danger">Delete</a>
               </td>
                   </tr>
                   @endforeach

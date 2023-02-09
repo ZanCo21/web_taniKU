@@ -12,17 +12,18 @@ use Illuminate\Queue\SerializesModels;
 class SendEmail extends Mailable
 {
 
-    public $isi_email;
+    
     use Queueable, SerializesModels;
+    public $order;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($isi_email)
+    public function __construct($order)
     {
-        $this->isi_email = $isi_email;
+        $this->order = $order;
     }
 
     /**
@@ -33,7 +34,7 @@ class SendEmail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Test Email',
+            subject: 'Pembayaran gagal',
         );
     }
 
@@ -45,12 +46,7 @@ class SendEmail extends Mailable
     public function content()
     {
         return new Content(
-            view: 'halaman.sendemail.pembayaran_email',
-            with: [
-                'title' => $this->isi_email->title,
-                'judul' => $this->isi_email->body,
-            ],
-
+            markdown: 'halaman.sendemail.pembayaran_email',
         );
     }
 

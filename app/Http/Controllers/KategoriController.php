@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Kategori;
+use App\Mail\OrderEmail;
+use App\Models\User;
+use App\Models\Order;
 use App\Models\Produk;
+use App\Models\Kategori;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class kategoriController extends Controller
 {
@@ -15,9 +19,12 @@ class kategoriController extends Controller
      */
     public function index()
     {
-        $kategori = Kategori::all();
-        $produk = Produk::all();
-        return view('halaman.dashboard', compact('kategori', 'produk'));
+        $kategori = Kategori::count();
+        $produk = Produk::count();
+        $transaksi = Order::where('status','Paid')->count();
+        $user = User::where('level', 'user')->count();
+
+        return view('halaman.dashboard', compact('kategori', 'produk', 'transaksi', 'user'));
 
         // $kategori = Kategori::select('')->get();
         // return view('halaman.dashboard', ['kategori' => $kategori]);
@@ -30,7 +37,9 @@ class kategoriController extends Controller
      */
     public function create()
     {
-        //
+        // $kategori = Kategori::all();
+
+        return view('halaman.admin.kategori.addkategori');
     }
 
     /**
@@ -41,7 +50,10 @@ class kategoriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Kategori::create($request->all());
+        // Mail::to('fauzan.alghifari21@gmail.com')->send(new OrderEmail());
+
+        return redirect('/dashboard/kategori');
     }
 
     /**
@@ -86,6 +98,10 @@ class kategoriController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $delete = Kategori::find($id);
+
+        $delete->delete();
+
+        return redirect('/dashboard/kategori');
     }
 }
