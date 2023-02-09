@@ -41,10 +41,34 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // hak akses
 Route::group(['middleware' => ['auth','ceklevel:admin']], function() {
-
+    
     Route::get('/dashboard',[KategoriController::class, 'index']);
-
+    
     route::get('/halamansatu','BerandaController@halamansatu')->name('halamansatu');
+    
+    // produk
+    Route::get('/produkpage', [ProdukPageController::class, 'index'])->name('/produkpage');
+    Route::get('/addproduk', [ProdukController::class, 'index'])->name('addproduk');
+    Route::post('/post-produk', [ProdukController::class, 'store'])->name('post-produk');
+    Route::get('/edit-produk/{id}', [ProdukController::class, 'edit'])->name('get.produk');
+    Route::get('/delete/produk/{id}', [ProdukController::class, 'delete'])->name('delete.produk');
+    
+    // view transaksi
+    Route::get('/viewtransaksi', [BerandaController::class, 'viewtrans'])->name('viewtrans');
+    
+    // kategori
+    Route::get('/dashboard/kategori/addkategori', [KategoriController::class, 'create'])->name('addkategori');
+    Route::post('/dashboard/kategori/addkategori/postkategori', [KategoriController::class, 'store'])->name('postkategori');
+    Route::get('/dashboard/kategori/delete/{id}', [KategoriController::class, 'destroy'])->name('deletekategori');
+    
+    
+    // admin dashboard
+    Route::get('/dashboard/produk',[BerandaController::class, 'produk'])->name('produk');
+    Route::get('/dashboard/kategori',[BerandaController::class, 'kategori'])->name('kategori');
+
+    // user dashboard
+    Route::get('/dashboard/user', [BerandaController::class, 'getuser'])->name('getuser');
+
 });
 
 
@@ -71,9 +95,10 @@ Route::get('/beranda', [BerandaController::class,'showberanda']);
 
 
 //produk
-Route::get('/produkpage', [ProdukPageController::class, 'index'])->name('/produkpage');
-Route::get('/addproduk', [ProdukController::class, 'index'])->name('addproduk');
-Route::post('/post-produk', [ProdukController::class, 'store'])->name('post-produk');
+
+
+// Route::put('/rubahproduk/{id}', [ProdukController::class, 'rubahproduk'])->name('rubah_produk');
+
 
 Route::get('/Artikel-kategori/{slug}', [ProdukPageController::class, 'showKategori'])->name('artikel.kategori');
 // Route::get('/Artikel-kategori/{kategori}', 'ProdukPageController@artikel_kategori')->name('artikel.kategori');
@@ -98,6 +123,7 @@ Route::middleware(['auth'])->group(function () {
     
     // pesanan page
     Route::get('/pesanan-page', [HomeController::class, 'viewpesanan']);
+    Route::get('/detail-pesanan/{id}', [HomeController::class, 'detailpesanan'])->name('detail.pesanan');
 });
 Route::post('delete-cart-item', [CartController::class, 'deletecart']);
 Route::post('update-cart', [CartController::class, 'updatecart']);
@@ -122,12 +148,13 @@ Route::get('province', [CheckoutController::class, 'get_province'])->name('provi
 Route::get('/kota/{id}', [CheckoutController::class, 'get_kota'])->name('kota');
 Route::get('/origin={city_origin}&destination={city_destination}&weight={weight}&courier={courier}',[CheckoutController::class, 'get_ongkir']);
 
-// admin dashboard
-Route::get('/dashboard/produk',[BerandaController::class, 'produk'])->name('produk');
-Route::get('/dashboard/kategori',[BerandaController::class, 'kategori'])->name('kategori');
 
 // invoice
 Route::get('/invoice/{id}', [OrderController::class, 'invoice']);
+
+
+// Route::post('/update-produk/{id}', [ProdukController::class, 'update'])->name('update-produk');
+Route::post('/update-produk/{id}', [ProdukController::class, 'update']);
 
 // // pesanan
 // Route::post('/midtrans-callback', [OrderController::class, 'callback']);

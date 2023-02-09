@@ -1,7 +1,7 @@
 @extends('index_master')
 @section('konten')
     <h1>ini pesanan</h1>
-    <div class="card ms-2" style="width: 18rem;">
+    <div class="card ms-2 " style="width: 18rem;">
         {{-- <img class="card-img-top" src="" alt="Card image cap"> --}}
         <div class="card-body">
           <h5 class="card-title">Order</h5>

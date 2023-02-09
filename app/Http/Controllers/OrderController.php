@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\Order;
+use App\Mail\OrderEmail;
+use App\Mail\SendEmail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
 {
@@ -77,6 +80,9 @@ class OrderController extends Controller
                 $order = Order::find($request->order_id);
                 $order->update(['status' => 'Paid']);
                 $order->update(['bank' => $request->bank]);
+                $order->update(['payment_type' => $request->payment_type]);
+                $order->update(['order_id' => $request->order_id]);
+                Mail::to($order->email)->send(new OrderEmail($order));
             }
         }
     }
@@ -84,6 +90,10 @@ class OrderController extends Controller
     public function invoice($id)
     {
         $order = Order::find($id);
+
+        if($order->status == 'Unpaid'){
+            Mail::to($order->email)->send(new SendEmail($order));
+        }
         
         return view('halaman.invoice', compact('order'));
     }

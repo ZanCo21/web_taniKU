@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Produk;
 use App\Models\Kategori;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProdukController extends Controller
 {
@@ -50,6 +51,7 @@ class ProdukController extends Controller
 
         $postProduk = new Produk;
         $postProduk->name_produk = $request->name_produk;
+        $postProduk->weight = $request->weight;
         $postProduk->slug = $request->slug;
         $postProduk->harga = $request->harga;
         $postProduk->image = $namaFile;
@@ -82,7 +84,10 @@ class ProdukController extends Controller
      */
     public function edit($id)
     {
-        //
+        $produk = Produk::find($id);
+        $kategori = Kategori::all();
+
+        return view('halaman.admin.produk.edit_produk', compact('produk', 'kategori'));
     }
 
     /**
@@ -92,9 +97,39 @@ class ProdukController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,$id)
     {
-        //
+        $editsiswa = Produk::find($id);
+        $awal = $editsiswa->image;
+
+        $dt = [
+            'name_produk'   => $request->name_produk,
+                'slug'   => $request->slug,
+                'harga'   => $request->harga,
+                'weight'   => $request->weight,
+                'short_description'   => $request->short_description,
+                'description'   => $request->description,
+                'stok'   => $request->stok
+        ];
+
+        if ($request->hasfile('image')) {
+            Storage::delete('public/img/'.$awal);
+            $request->image->move(public_path().'/img', $awal);
+        }
+        $editsiswa->update($dt);
+
+
+        // dd($editsiswa);
+        return redirect()->route('produk')->with('success','Student deleted successfully');
+    }
+    
+    public function delete($id)
+    {
+        $deleteproduk = Produk::find($id);
+
+        $deleteproduk->delete();
+
+        return redirect()->route('produk')->with('success','Student deleted successfully');
     }
 
     /**

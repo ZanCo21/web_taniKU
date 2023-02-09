@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->string('bank')->after('nama_layanan');
-            $table->string('no_resi')->after('barang');
+            $table->string('payment_type')->after('bank');
+            $table->string('order_id')->after('id');
         });
     }
 
@@ -27,8 +27,8 @@ return new class extends Migration
     public function down()
     {
         Schema::table('orders', function (Blueprint $table) {
-            $table->dropColumn('bank');
-            $table->dropColumn('no_resi');
+            $table->dropColumn('payment_type');
+            $table->dropColumn('order_id');
         });
     }
 };

@@ -55,12 +55,30 @@
 </div>
 <div class="float-end pe-2 pt-2">
     @if (Auth::user())
-    <a href="{{ url('checkout') }}" class="btn btn-success ">proceed to Checkout</a>
+    {{-- <a href="{{ url('checkout') }}" class="btn btn-success " onclick="contoh()">proceed to Checkout</a> --}}
+    <button class="btn btn-success " onclick="contoh()">proceed to Checkout</button>
     @else
-    <a href="/login" class="btn btn-danger">proceed to Checkout</a>
+    <a href="/login" class="orderbtn btn btn-danger">proceed to Checkout</a>
     @endif
 </div>
 <div class="card-footer">
     <h4>TOTAL PRICE : {{ $total }}</strong></h4>
 </div>
+
+<script>
+function contoh() {
+    swal('Setiap Pembelian Tidak Dapat Di Cancel', {
+        title: "Are you sure?!",
+        icon: "info",
+    buttons: true
+  }).then(val => {
+    // when the promise resolves,
+    // check the value that was passed
+
+    if (val) {
+    window.location = "/checkout";
+    }
+  });
+}
+</script>
 @endsection

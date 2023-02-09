@@ -267,4 +267,5 @@ $(document).ready(function (){
            counter = 1;
        }
    }, 3500);
+
 });

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kategori;
+use App\Models\Order;
 use App\Models\Produk;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class BerandaController extends Controller
@@ -35,5 +37,19 @@ class BerandaController extends Controller
         return view('halaman.admin.kategori.kategori', compact('kategori'));
 
         
+    }
+
+    public function viewtrans()
+    {
+        $getdata_transaksi = Order::where('status','Paid')->latest('created_at')->get();
+
+        return view('halaman.admin.transaksi.transaksi', compact('getdata_transaksi'));
+    }
+
+    public function getuser()
+    {
+        $user = User::where('level', 'user')->get();
+
+        return view('halaman.admin.user.datauser', compact('user'));
     }
 }

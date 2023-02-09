@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Buku Siswa Admin</title>
+    <title>TaniKU</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ asset('assets/vendors/mdi/css/materialdesignicons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendors/css/vendor.bundle.base.css') }}">
@@ -51,7 +51,7 @@
             <div class="profile-desc">
               <div class="profile-pic">
                 <div class="count-indicator">
-                  <img class="img-xs rounded-circle " src="{{ asset('assets/images/faces/face15.jpg') }}" alt="">
+                  <img class="img-xs rounded-circle " src="/img/1668793223971.png" alt="">
                   <span class="count bg-success"></span>
                 </div>
                 <div class="profile-name">
@@ -124,19 +124,19 @@
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="{{ route('viewtrans') }}">
               <span class="menu-icon">
                 <i class="mdi mdi-book"></i>
               </span>
-              <span class="menu-title">Pelanggaran</span>
+              <span class="menu-title">Transaksi</span>
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="{{ Route('getuser') }}">
               <span class="menu-icon">
                 <i class="mdi mdi-book"></i>
               </span>
-              <span class="menu-title">Kelas</span>
+              <span class="menu-title">User</span>
             </a>
           </li>
         </ul>
@@ -297,7 +297,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                   <div class="navbar-profile">
-                    <img class="img-xs rounded-circle" src="{{ asset('assets/images/faces/face15.jpg') }}" alt="">
+                    <img class="img-xs rounded-circle" src="/img/1668793223971.png" alt="">
                     <p class="mb-0 d-none d-sm-block navbar-profile-name">{{Auth::user()->name}}</p>
                     <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                   </div>
