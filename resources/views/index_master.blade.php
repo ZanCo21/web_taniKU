@@ -40,7 +40,7 @@
               <a class="nav-link active" aria-current="page" href="{{ route('/') }}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="{{ url('cart') }}">Cart</a>
+              <a class="nav-link active fa fa-shopping-cart" href="{{ url('cart') }}">Cart</a>
             </li>
             <li class="nav-item">
               {{-- <a class="nav-link active" href="{{ url('about') }}">About</a> --}}
@@ -81,7 +81,7 @@
     </div>
 
     {{-- fotter --}}
-    <div class="mt-5 m" style="background-color: #173F36; height: 200px; width: 100%; text-align: center;">
+    <div class="mt-5 m" style="background-color: #173F36; height: 160px; width: 100%; text-align: center;">
       <br>
       <div class="pt-5">
       <i class="fa-brands fa-instagram me-2" style="color: #fff;"></i>
@@ -91,6 +91,7 @@
       </div>
     </div>
 </div>
+
 
     <script src="https://kit.fontawesome.com/09294afb62.js" crossorigin="anonymous"></script>
     <script src="../asset/main.js"></script>

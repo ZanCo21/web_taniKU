@@ -1,6 +1,6 @@
 @extends('index_master')
 @section('konten')
-<div class="col-md-12 mt-2 ms-5">
+<div class="col-md-6 mt-2 ms-5">
     <a href="{{ url('cart') }}" class="btn btn-danger mt-3">Back</a>
     <nav aria-label="breadcrumb" class="mt-2">
         <ol class="breadcrumb">
@@ -14,17 +14,17 @@
 <div class="container d-flex">
     <div class="row">
         <div class="col-md-12">
-            <div class="card">
+            <div class="card-footer">
                 <div class="card-body">
                     <form class="ps-checkout__form" action="/order" method="post">
                         @csrf
                         <div class="row">
                         <div class="col-md-8">
-                        <h3 class="mt-5 mb-5">Alamat Pengiriman</h3>
+                        <h3 class="mt-2 mb-5">Alamat Pengiriman</h3>
                         <div class="form-group ">
-                        <div class="form-group">
+                        <div class="form-group" style="margin-top: -30px;">
                             <label>Name</label>
-                            <input type="text" name="name" id="" placeholder="{{Auth::user()->name}}" value="{{Auth::user()->name}}">
+                            <input type="text" name="name" id="" placeholder="{{Auth::user()->name}}" value="{{Auth::user()->name}}" style="margin-top: 5px;">
                         </div>
                         <br>
                         <div class="form-group">
@@ -53,7 +53,7 @@
                         <div class="form-group ">
                         <label>Provinsi Tujuan<span>*</span>
                         </label>
-                        <select name="provinsi_id" id="provinsi_id" class="form-control">
+                        <select name="provinsi_id" id="provinsi_id" class="form-control" style="margin-top: 5px;">
                             <option value="">pilih Provinsi</option>
                             @foreach ($provinsi  as $row)
                             <option value="{{$row['province_id']}}" namaprovinsi="{{$row['province']}}">{{$row['province']}}</option>
@@ -67,7 +67,7 @@
                         <div class="form-group ">
                         <label>Kota Tujuan<span>*</span>
                         </label>
-                        <select name="kota_id" id="kota_id" class="form-control">
+                        <select name="kota_id" id="kota_id" class="form-control" style="margin-top: 5px;">
                         <option value="">Pilih Kota</option>
                         </select>
                         </div>
@@ -78,7 +78,7 @@
                         <div class="form-group ">
                             <label>Pilih Ekspedisi<span>*</span>
                             </label>
-                            <select name="kurir" id="kurir" class="form-control">
+                            <select name="kurir" id="kurir" class="form-control" style="margin-top: 5px;">
                             <option value="">Pilih kurir</option>
                             <option value="jne">JNE</option>
                             <option value="tiki">TIKI</option>
@@ -88,7 +88,7 @@
                             <br>
                             <div class="form-group">
                             <label>Pilih Layanan<span>*</span>
-                                <select name="layanan" id="layanan" class="form-control">
+                                <select name="layanan" id="layanan" class="form-control" style="margin-top: 5px;">
                                 <option value="">Pilih layanan</option>
                             </label>
                             <div class="form-group">
@@ -97,9 +97,9 @@
                             </select>
                         </div>
                          <br>
-                        <div class="form-group ">
+                        <div class="form-group" style="margin-top: 20px;">
                             <label>Kode Pos<span>*</span></label>
-                            <input type="text" name="kode_pos" class="form-control" >
+                            <input type="text" name="kode_pos" class="form-control" style="margin-top: 5px;" >
                         </div>
                         </div>
                         <div>

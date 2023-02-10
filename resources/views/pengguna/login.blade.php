@@ -15,41 +15,46 @@
 <body style="background-image: url(img/padi.jpg);">
 <div class="row">
     <div class="container2">
-        <h1>Login</h1>
-        <form action="{{ Route('postlogin') }}" class="gambar2" method="POST">
+        <div class="gambar2">
+        <h3>Login</h3>
+        <form action="{{ Route('postlogin') }}" class="" method="POST">
             {{ csrf_field() }}
-            <div class="mb-6">
+            <div class="mb-6 mt-5">
                 <label class="fotm-controll" >Email</label>
                 <input autofocus class="form-control" type="email" name="email" value="{{ old('username') }}" />
             </div>
-            <div class="mb-7">
+            <div class="mb-7 mt-5">
                 <label class="fotm-controll">Password</label>
                 <input class="form-control" type="password" name="password">
             </div>
-            <div class="mb-8">
+            <div class="mb-8 mt-5">
                 <button class="btn-primary2">Login</button>
             </div>
+            
+        </form>
+        <div style="display: flex; margin-left: 47%; width: 200%;">
             <div class="col-md-3">
-                <a class="btn btn-outline-dark" href="{{ route('githublogin') }}" role="button" style="text-transform:none">
-                  <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
+                <a class="btn btn-outline-dark" href="{{ route('githublogin') }}" style="text-transform:none; margin-top: 300px; width: 70%; background-color: white; color: black;">
+                  <img  style="margin-bottom:3px; margin-left:10px; width: 20%; margin-top: 5px;" alt="Google sign-in" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
                   Login with Github
                 </a>
               </div>
-
+            </div>
+            <div style="display: flex; margin-left: 10%; width: 200%; margin-top: -100px;">
               <div class="col-md-3">
-                <a class="btn btn-outline-dark" href="{{ route('googlelogin') }}" role="button" style="text-transform:none">
-                  <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                <a class="btn btn-outline-dark" href="{{ route('googlelogin') }}" role="button" style="text-transform:none; margin-top: 38px; width: 70%; background-color: white; color: black;">
+                  <img style="margin-bottom:3px; margin-left:10px; width: 20%; margin-top: 5px;" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
                   Login with Google
                 </a>
               </div>
-
-
-            <div class="text-center2" style="margin-top: 360px">
+            </div>  
+            <div class="text-center2" style="margin-top: 20px;">
             DON'T HAVE AN ACCOUNT? <a href="register">register</a>
-            </div>
-        </form>
+            </div>
+        </div>         
     </div>
+   
 </div>
-<img src="img/TaniKU2.png" alt="">
+<img src="img/TaniKU2.png" alt="" style="margin-left: 30%; margin-top: 90px;">
 </body>
 </html>

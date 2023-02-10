@@ -6,6 +6,7 @@
 
 body {
     background-size: cover;
+    position: fixed;
 }
 
 img {
@@ -40,7 +41,7 @@ img {
     width: 360px;
     height: 45px;
     left: 120px;
-    top: 80px;
+    top: 30px;
 }
 
 .mb-2{
@@ -48,7 +49,7 @@ img {
     width: 360px;
     height: 45px;
     left: 120px;
-    top: 150px;
+    top: 100px;
 }
 
 .mb-3{
@@ -56,7 +57,7 @@ img {
     width: 360px;
     height: 45px;
     left: 120px;
-    top: 220px;
+    top: 170px;
 }
 
 .mb-4{
@@ -64,7 +65,7 @@ img {
     width: 360px;
     height: 51px;
     left: 120px;
-    top: 290px;
+    top: 240px;
 }
 
 .mb-5{
@@ -72,24 +73,17 @@ img {
     width: 360px;
     height: 51px;
     left: 120px;
-    top: 360px;
+    top: 310px;
 }
 
-.btn-danger{
-    position: absolute;
-    width: 60px;
-    height: 45px;
-    left: 500px;
-    top: 90px; 
-}
 .btn-primary{
     position: absolute;
     width: 360px;
     height: 50px;
-    left: 120px;
-    top: 470px;
-    background: #3E6D9C;
+    left: 0px;
+    top: 385px;
     border-radius: 16px;
+    background-color: grey;
 }
 
 .text-center{
@@ -114,8 +108,4 @@ img {
     width: 36%;
     margin-top: -20px;
     margin-left: 60px;
-}
-
-.btn-danger{
-    top: 410px;
 }
