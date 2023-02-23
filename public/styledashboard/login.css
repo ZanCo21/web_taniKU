@@ -71,9 +71,9 @@ body {
     width: 360px;
     height: 50px;
     left: 0px;
-    top: 10px;
+    top: 50px;
     border-radius: 16px;
-    background-color: grey;
+    border-color: blue;
 }
 
 .text-center2{

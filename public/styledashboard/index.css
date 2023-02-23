@@ -212,12 +212,12 @@ padding: 0;
 }
 
 a{
-  color: #22697F;
+  /* color: #22697F; */
   text-decoration: none
 }
 
 a:hover{
-  text-decoration:underline
+  text-decoration: none;
 }
 
 .separator{

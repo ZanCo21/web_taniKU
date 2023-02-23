@@ -43,7 +43,14 @@ class LoginController extends Controller
         $user->save();
 
         // return redirect()->route('login')->with('success', 'Registration success. Please login!');
-        return redirect('/login')->with('success', 'Registration success. Please login!');
+        // return redirect('/login')->with('success', 'Registration success. Please login!');
+        if(!is_null($user)) {
+            return back()->with("success", "Success! Registration completed");
+        }
+
+        else {
+            return back()->with("failed", "Alert! Failed to register");
+        }
 
     }
 
