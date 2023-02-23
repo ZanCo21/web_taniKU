@@ -16,31 +16,31 @@
                     @csrf
                     <div class="mb-3">
                         <label for="nim" class="form-label">Nama Produk</label>
-                        <input type="text" class="form-control"  name="name_produk" id="name_produk">
+                        <input type="text" class="form-control"  name="name_produk" id="name_produk" required>
                     </div>
                     <div class="mb-3">
                         <label for="nama" class="form-label">Image</label>
-                        <input type="file" class="form-control" name="image" id="image" >
+                        <input type="file" class="form-control" name="image" id="image" required>
                     </div>
                     <div class="mb-3">
                         <label for="nama" class="form-label">Harga</label>
-                        <input type="number" class="form-control" name="harga" id="harga" >
+                        <input type="number" class="form-control" name="harga" id="harga" required>
                     </div>
                     <div class="mb-3">
                         <label for="nama" class="form-label">Weight *gram</label>
-                        <input type="number" class="form-control" name="weight" id="weight" >
+                        <input type="number" class="form-control" name="weight" id="weight" required>
                     </div>
                     <div class="mb-3">
                         <label for="jurusan" class="form-label">Short Description</label>
-                        <input type="text" class="form-control" name="short_description" id="short_description" >
+                        <input type="text" class="form-control" name="short_description" id="short_description" required>
                     </div>
                     <div class="mb-3">
                         <label for="jurusan" class="form-label">Description</label>
-                        <input type="text" class="form-control" name="description" id="description" >
+                        <input type="text" class="form-control" name="description" id="description" required>
                     </div>
                     <div class="mb-3">
                         <label for="jurusan" class="form-label">Slug</label>
-                        <select name="slug" id="slug">
+                        <select name="slug" id="slug" required>
                             <option value=""></option>
                         @foreach ($kategori as $item)
                             <option>{{ $item->slug }}</option>
@@ -50,7 +50,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="jurusan" class="form-label">Stok</label>
-                        <input type="number" name="stok" id="">
+                        <input type="number" name="stok" id="" required>
                     </div>
                     <button type="submit" class="btn btn-primary float-end mb-5">Simpan</button>
                 </form>

@@ -1,6 +1,7 @@
 @extends('app')
 @section('content')
 <!-- My CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <div class="row">
     <div class="container">
@@ -8,25 +9,36 @@
         <div class="gambar">
             <form action="{{ route('register.action') }}" class="" method="POST">
             @csrf
+            @if(Session::has('success'))
+            <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                {{Session::get('success')}}
+            </div>
+        @elseif(Session::has('failed'))
+            <div class="alert alert-danger alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert">×</button>
+                {{Session::get('failed')}}
+            </div>
+        @endif
             <div class="mb-1">
                 <label class="form-control1">Name <span class="text-danger">*</span></label>
-                <input class="form-control" type="text" name="name" value="" />
+                <input class="form-control" type="text" name="name" value="" required>
             </div>
             <div class="mb-2">
                 <label class="form-control1">Email <span class="text-danger">*</span></label>
-                <input class="form-control" type="email" name="email" value="" />
+                <input class="form-control" type="email" name="email" value="" required>
             </div>
             <div class="mb-3">
                 <label class="form-control1">No. Telephone <span class="text-danger">*</span></label>
-                <input class="form-control" type="number" name="no" value="" />
+                <input class="form-control" type="number" name="no" value="" required>
             </div>
             <div class="mb-4">
                 <label class="form-control1">Password <span class="text-danger">*</span></label>
-                <input class="form-control" type="password" name="password" />
+                <input class="form-control" type="password" name="password" required>
             </div>
             <div class="mb-5">
                 <label class="form-control1">Password Confirmation <span class="text-danger">*</span></label>
-                <input class="form-control" type="password" name="password_confirm" />
+                <input class="form-control" type="password" name="password_confirm" required>
             </div>
            
             <div class="mb-8 mt-5">

@@ -16,11 +16,11 @@
                     @csrf
                     <div class="mb-3">
                         <label for="nim" class="form-label">Nama kategori</label>
-                        <input type="text" class="form-control"  name="nama_kategori" id="name_produk">
+                        <input type="text" class="form-control"  name="nama_kategori" id="name_produk" required>
                     </div>
                     <div class="mb-3">
                         <label for="jurusan" class="form-label">Slug</label>
-                        <input type="text" class="form-control"  name="slug" id="name_produk">
+                        <input type="text" class="form-control"  name="slug" id="name_produk" required>
                     </div>
                     <button type="submit" class="btn btn-primary float-end mb-5">Simpan</button>
                 </form>

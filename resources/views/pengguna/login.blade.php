@@ -21,11 +21,11 @@
             {{ csrf_field() }}
             <div class="mb-6 mt-5">
                 <label class="fotm-controll" >Email</label>
-                <input autofocus class="form-control" type="email" name="email" value="{{ old('username') }}" />
+                <input autofocus class="form-control" type="email" name="email" value="{{ old('username') }}" required>
             </div>
             <div class="mb-7 mt-5">
                 <label class="fotm-controll">Password</label>
-                <input class="form-control" type="password" name="password">
+                <input class="form-control" type="password" name="password" required>
             </div>
             <div class="mb-8 mt-5">
                 <button class="btn-primary2">Login</button>

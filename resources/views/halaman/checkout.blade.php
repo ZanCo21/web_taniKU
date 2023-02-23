@@ -24,17 +24,17 @@
                         <div class="form-group ">
                         <div class="form-group" style="margin-top: -30px;">
                             <label>Name</label>
-                            <input type="text" name="name" id="" placeholder="{{Auth::user()->name}}" value="{{Auth::user()->name}}" style="margin-top: 5px;">
+                            <input type="text" name="name" id="" placeholder="{{Auth::user()->name}}" value="{{Auth::user()->name}}" style="margin-top: 5px;"required>
                         </div>
                         <br>
                         <div class="form-group">
                            <label for="">Email</label>
-                            <input type="text" name="email" id="" placeholder="{{Auth::user()->email}}" value="{{Auth::user()->email}}">
+                            <input type="text" name="email" id="" placeholder="{{Auth::user()->email}}" value="{{Auth::user()->email}}" required>
                         </div>
                         <br>
                         <div class="form-group">
                             <label>Phone</label>
-                            <input type="number" name="phone" id="" placeholder="" value="">
+                            <input type="number" name="phone" id="" placeholder="" value="" required>
                         </div>
                         {{-- <label>Provinsi asal</label> --}}
                         <input type="hidden" value="9" class="form-control" name="province_origin">
@@ -47,13 +47,13 @@
                         <div class="form-group ">
                         <label>Alamat<span>*</span>
                         </label>
-                        <textarea name="address" class="form-control" rows="5" placeholder="Alamat Lengkap pengiriman" ></textarea>
+                        <textarea name="address" class="form-control" rows="5" placeholder="Alamat Lengkap pengiriman" required></textarea>
                         </div>
                         <br>
                         <div class="form-group ">
                         <label>Provinsi Tujuan<span>*</span>
                         </label>
-                        <select name="provinsi_id" id="provinsi_id" class="form-control" style="margin-top: 5px;">
+                        <select name="provinsi_id" id="provinsi_id" class="form-control" style="margin-top: 5px;" required>
                             <option value="">pilih Provinsi</option>
                             @foreach ($provinsi  as $row)
                             <option value="{{$row['province_id']}}" namaprovinsi="{{$row['province']}}">{{$row['province']}}</option>
@@ -61,24 +61,24 @@
                         </select>
                         </div>
                         <div class="form-group">
-                            <input type="hidden" class="form-control" id="nama_provinsi" name="nama_provinsi" placeholder="ini untuk menangkap nama provinsi ">
+                            <input type="hidden" class="form-control" id="nama_provinsi" name="nama_provinsi" placeholder="ini untuk menangkap nama provinsi " required>
                         </div>
                         <br>
                         <div class="form-group ">
                         <label>Kota Tujuan<span>*</span>
                         </label>
-                        <select name="kota_id" id="kota_id" class="form-control" style="margin-top: 5px;">
+                        <select name="kota_id" id="kota_id" class="form-control" style="margin-top: 5px;" required>
                         <option value="">Pilih Kota</option>
                         </select>
                         </div>
                         <div class="form-group">
-                            <input type="hidden" class="form-control" id="nama_kota" name="nama_kota" placeholder="ini untuk menangkap nama kota">
+                            <input type="hidden" class="form-control" id="nama_kota" name="nama_kota" placeholder="ini untuk menangkap nama kota" required>
                         </div>
                         <br>
                         <div class="form-group ">
                             <label>Pilih Ekspedisi<span>*</span>
                             </label>
-                            <select name="kurir" id="kurir" class="form-control" style="margin-top: 5px;">
+                            <select name="kurir" id="kurir" class="form-control" style="margin-top: 5px;" required>
                             <option value="">Pilih kurir</option>
                             <option value="jne">JNE</option>
                             <option value="tiki">TIKI</option>
@@ -88,18 +88,18 @@
                             <br>
                             <div class="form-group">
                             <label>Pilih Layanan<span>*</span>
-                                <select name="layanan" id="layanan" class="form-control" style="margin-top: 5px;">
+                                <select name="layanan" id="layanan" class="form-control" style="margin-top: 5px;" required>
                                 <option value="">Pilih layanan</option>
                             </label>
                             <div class="form-group">
-                                <input type="hidden" class="form-control" id="nama_layanan" name="nama_layanan" placeholder="ini untuk menangkap nama kota">
+                                <input type="hidden" class="form-control" id="nama_layanan" name="nama_layanan" placeholder="ini untuk menangkap nama kota" required>
                             </div>
                             </select>
                         </div>
                          <br>
                         <div class="form-group" style="margin-top: 20px;">
                             <label>Kode Pos<span>*</span></label>
-                            <input type="text" name="kode_pos" class="form-control" style="margin-top: 5px;" >
+                            <input type="text" name="kode_pos" class="form-control" style="margin-top: 5px;" required>
                         </div>
                         </div>
                         <div>

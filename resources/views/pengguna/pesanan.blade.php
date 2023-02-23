@@ -24,7 +24,7 @@
             {{-- <li class="list-group-item " style="color: white;"><p class="bg-danger p-2" style="width: fit-content;">{{ $order->status }}</p></li> --}}
         </div>
         <div class="card-body">
-          <a href="#" class="btn btn-primary card-link" style="margin-left: 74%;">Pay Now</a>
+          <a href="#" class="btn btn-primary card-link" style="margin-left: 74%;" id="pay-button">Pay Now</a>
         </div>
       </div>
       <script type="text/javascript">
