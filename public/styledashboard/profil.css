@@ -15,11 +15,14 @@ img{
     margin-top: -40px;
 }
 
-.date{
+.form-control{
+    height: 30px;
+    width: 200px;
     margin-left: 200px;
-    margin-top: -40px;
+    margin-top: -45px;
     color: rgb(14, 184, 14);
 }
+
 
 .jenis{
     margin-left: 200px;
@@ -46,7 +49,7 @@ img{
     width: 120px;
     height: 36px;
     top: 410px;
-    background: #C53636;
+    background: green;
     border-radius: 10px;
     color: white;
 } 

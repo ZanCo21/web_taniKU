@@ -61,24 +61,24 @@
                         </select>
                         </div>
                         <div class="form-group">
-                            <input type="hidden" class="form-control" id="nama_provinsi" name="nama_provinsi" placeholder="ini untuk menangkap nama provinsi " required>
+                            <input type="hidden" class="form-control" id="nama_provinsi" name="nama_provinsi" placeholder="ini untuk menangkap nama provinsi ">
                         </div>
                         <br>
                         <div class="form-group ">
                         <label>Kota Tujuan<span>*</span>
                         </label>
-                        <select name="kota_id" id="kota_id" class="form-control" style="margin-top: 5px;" required>
+                        <select name="kota_id" id="kota_id" class="form-control" style="margin-top: 5px;">
                         <option value="">Pilih Kota</option>
                         </select>
                         </div>
                         <div class="form-group">
-                            <input type="hidden" class="form-control" id="nama_kota" name="nama_kota" placeholder="ini untuk menangkap nama kota" required>
+                            <input type="hidden" class="form-control" id="nama_kota" name="nama_kota" placeholder="ini untuk menangkap nama kota">
                         </div>
                         <br>
                         <div class="form-group ">
                             <label>Pilih Ekspedisi<span>*</span>
                             </label>
-                            <select name="kurir" id="kurir" class="form-control" style="margin-top: 5px;" required>
+                            <select name="kurir" id="kurir" class="form-control" style="margin-top: 5px;">
                             <option value="">Pilih kurir</option>
                             <option value="jne">JNE</option>
                             <option value="tiki">TIKI</option>
@@ -88,11 +88,11 @@
                             <br>
                             <div class="form-group">
                             <label>Pilih Layanan<span>*</span>
-                                <select name="layanan" id="layanan" class="form-control" style="margin-top: 5px;" required>
+                                <select name="layanan" id="layanan" class="form-control" style="margin-top: 5px;">
                                 <option value="">Pilih layanan</option>
                             </label>
                             <div class="form-group">
-                                <input type="hidden" class="form-control" id="nama_layanan" name="nama_layanan" placeholder="ini untuk menangkap nama kota" required>
+                                <input type="hidden" class="form-control" id="nama_layanan" name="nama_layanan" placeholder="ini untuk menangkap nama kota">
                             </div>
                             </select>
                         </div>

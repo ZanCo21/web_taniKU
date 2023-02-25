@@ -14,9 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 <body style="background-image: url(img/padi.jpg);">
 <div class="row">
+<h1 style="margin-left: 40px; margin-top: 40px; font-weight: bold; color:  rgb(17, 175, 85);">Login</h1>
     <div class="container2">
         <div class="gambar2">
-        <h3>Login</h3>
         <form action="{{ Route('postlogin') }}" class="" method="POST">
             {{ csrf_field() }}
             <div class="mb-6 mt-5">
@@ -32,7 +32,7 @@
             </div>
             
         </form>
-        <div style="display: flex; margin-left: 47%; width: 200%;">
+        <div style="display: flex; margin-left: 47%; width: 200%; margin-top: 90px;">
             <div class="col-md-3">
                 <a class="btn btn-outline-dark" href="{{ route('githublogin') }}" style="text-transform:none; margin-top: 300px; width: 70%; background-color: white; color: black;">
                   <img  style="margin-bottom:3px; margin-left:10px; width: 20%; margin-top: 5px;" alt="Google sign-in" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
@@ -40,7 +40,7 @@
                 </a>
               </div>
             </div>
-            <div style="display: flex; margin-left: 10%; width: 200%; margin-top: -100px;">
+            <div style="display: flex; margin-left: 10%; width: 200%; margin-top: -99px;">
               <div class="col-md-3">
                 <a class="btn btn-outline-dark" href="{{ route('googlelogin') }}" role="button" style="text-transform:none; margin-top: 38px; width: 70%; background-color: white; color: black;">
                   <img style="margin-bottom:3px; margin-left:10px; width: 20%; margin-top: 5px;" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
@@ -55,6 +55,6 @@
     </div>
    
 </div>
-<img src="img/TaniKU2.png" alt="" style="margin-left: 30%; margin-top: 90px;">
+<img src="img/TaniKU2.png" alt="" style="margin-left: 30%; margin-top: 10px;">
 </body>
 </html>

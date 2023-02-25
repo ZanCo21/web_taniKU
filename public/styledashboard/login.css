@@ -14,14 +14,6 @@ body {
     color:  #ffff;
 
 }
-
-.container2 h3{
-    color:  rgb(26, 196, 100);
-    margin-top: 40px;
-    font-family: 'Montserrat', sans-serif;
-    margin-left: 30px;
-}
-
 .gambar2{
     position: absolute;
     width: 650px;
@@ -97,7 +89,7 @@ body {
 
 
 img {
-    width: 70%;
+    width: 75%;
     margin-top: -20px;
-    margin-left: 60px;
+    margin-left: 50px;
 }

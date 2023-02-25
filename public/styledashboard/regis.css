@@ -16,11 +16,13 @@ img {
 }
 
 .container{
-    color:  rgb(26, 196, 100);
+    color:  rgb(17, 175, 85);
 }
 
 .container h1{
-    margin-top: 40px;
+    font-weight: bold;
+    margin-top: 35px;
+    margin-left: 20px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -40,15 +42,15 @@ img {
     position: absolute;
     width: 360px;
     height: 45px;
-    left: 120px;
-    top: 30px;
+    left: 150px;
+    top: 25px;
 }
 
 .mb-2{
     position: absolute;
     width: 360px;
     height: 45px;
-    left: 120px;
+    left: 150px;
     top: 100px;
 }
 
@@ -56,7 +58,7 @@ img {
     position: absolute;
     width: 360px;
     height: 45px;
-    left: 120px;
+    left: 150px;
     top: 170px;
 }
 
@@ -64,7 +66,7 @@ img {
     position: absolute;
     width: 360px;
     height: 51px;
-    left: 120px;
+    left: 150px;
     top: 240px;
 }
 
@@ -72,7 +74,7 @@ img {
     position: absolute;
     width: 360px;
     height: 51px;
-    left: 120px;
+    left: 150px;
     top: 310px;
 }
 
@@ -81,7 +83,7 @@ img {
     width: 360px;
     height: 50px;
     left: 0px;
-    top: 385px;
+    top: 390px;
     border-radius: 16px;
     background-color: grey;
 }
@@ -105,7 +107,7 @@ img {
 }
 
 img {
-    width: 36%;
-    margin-top: -20px;
-    margin-left: 60px;
+    width: 60%;
+    margin-top: -10px;
+    margin-left: 109px;
 }

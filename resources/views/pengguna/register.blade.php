@@ -42,22 +42,22 @@
             </div>
            
             <div class="mb-8 mt-5">
-                <button class="btn-primary" style="margin-left: 120px;">Register</button>
+                <button class="btn-primary" style="margin-left: 150px;">Register</button>
             </div>
             
 
         </form>
-        <div style="display: flex; margin-left: 55%; width: 80%;">
+        <div style="display: flex; margin-left: 50%; width: 80%;">
             <div class="col-md-3">
-                <a class="btn btn-outline-dark" href="{{ route('githublogin') }}" style="text-transform:none; margin-top: 400px; width: 200%; background-color: white; color: black;">
-                  <img  style="margin-bottom:3px; margin-left:10px; width: 20%; margin-top: 5px;" alt="Google sign-in" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
+                <a class="btn btn-outline-dark" href="{{ route('githublogin') }}" style="text-transform:none; margin-top: 404px; width: 220%; background-color: white; color: black;">
+                  <img  style="margin-bottom:3px; margin-left:15px; width: 20%; margin-top: 5px;" alt="Google sign-in" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
                   Login with Github
                 </a>
               </div>
             </div>
-            <div style="display: flex; margin-left: 10%; width: 80%; margin-top: -100px;">
+            <div style="display: flex; margin-left: 12%; width: 80%; margin-top: -100px;">
               <div class="col-md-3">
-                <a class="btn btn-outline-dark" href="{{ route('googlelogin') }}" role="button" style="text-transform:none; margin-top: 32px; width: 200%; background-color: white; color: black;">
+                <a class="btn btn-outline-dark" href="{{ route('googlelogin') }}" role="button" style="text-transform:none; margin-top: 40px; width: 220%; background-color: white; color: black;">
                   <img style="margin-bottom:3px; margin-left:10px; width: 20%; margin-top: 5px;" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
                   Login with Google
                 </a>
