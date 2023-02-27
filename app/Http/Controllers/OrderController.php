@@ -91,10 +91,21 @@ class OrderController extends Controller
     {
         $order = Order::find($id);
 
+        // if($order->status == 'Unpaid'){
+        //     // Mail::to($order->email)->send(new SendEmail($order));
+        // }
+        
+        return view('halaman.invoice', compact('order'));
+    }
+
+    public function sendinvoice($id)
+    {
+        $order = Order::find($id);
+
         if($order->status == 'Unpaid'){
             Mail::to($order->email)->send(new SendEmail($order));
         }
         
-        return view('halaman.invoice', compact('order'));
+        return view('halaman.sendemail.invoice', compact('order'));
     }
 }

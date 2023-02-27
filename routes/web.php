@@ -151,6 +151,7 @@ Route::get('/origin={city_origin}&destination={city_destination}&weight={weight}
 
 // invoice
 Route::get('/invoice/{id}', [OrderController::class, 'invoice']);
+Route::get('/sendinvoice/{id}', [OrderController::class, 'sendinvoice']);
 
 
 // Route::post('/update-produk/{id}', [ProdukController::class, 'update'])->name('update-produk');

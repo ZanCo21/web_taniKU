@@ -46,7 +46,8 @@ class SendEmail extends Mailable
     public function content()
     {
         return new Content(
-            markdown: 'halaman.sendemail.pembayaran_email',
+            // markdown: 'halaman.sendemail.pembayaran_email',
+            view: 'halaman.sendemail.invoice',
         );
     }
 
