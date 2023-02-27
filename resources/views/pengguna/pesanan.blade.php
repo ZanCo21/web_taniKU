@@ -1,9 +1,9 @@
 @extends('index_master')
 @section('konten')
-    <div class="card2" style="width: 20%; height: 450px; background-color: #1984F1; margin-left: 15%; margin-top: 60px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)">
+    <div class="card2" style="width: 20%; height: 450px; background-color: #1984F1; margin-left: 25.2%; margin-top: 60px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25)">
       <h2 style="margin-left: 30%; font-weight: bold; color: white; margin-top: 70px;">TaniKu</h2>
     </div>
-    <div class="mx-auto" style="width: 25rem; margin-left: 100%; height: 450px; margin-top: -450px; background-color: white; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.10);">
+    <div class="" style="width: 25rem; height: 450px; margin-top: -450px; float: right; margin-right: 25.2%; background-color: white; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.10);">
         {{-- <img class="card-img-top" src="" alt="Card image cap"> --}}
         <div class="card-body" style="align-items: center;">
           <h4 class="card-title" style="font-weight: bold; color: blue; margin-left: 10%; margin-top: 10px;">Payment</h4>
@@ -37,6 +37,23 @@
               /* You may add your own implementation here */
               // alert("payment success!"); 
               window.location.href = '/invoice/{{$order->id}}';
+
+              $.ajaxSetup({
+              headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              }
+              });
+
+              $.ajax({
+              method: "GET",
+              url: "/sendinvoice/{{$order->id}}",
+              data: "",
+              dataType: "",
+              success: function (response){
+                console.log("done send email")
+            }
+          });
+
               console.log(result);
             },
             onPending: function(result){
