@@ -77,7 +77,8 @@ class OrderController extends Controller
         if($hashed == $request->signature_key){
             if($request->transaction_status == 'capture')
             {
-                $order = Order::find($request->order_id);
+                // $order = Order::find($request->order_id);
+                $order = Order::where('id', $request->order_id)->first();
                 $order->update(['status' => 'Paid']);
                 $order->update(['bank' => $request->bank]);
                 $order->update(['payment_type' => $request->payment_type]);

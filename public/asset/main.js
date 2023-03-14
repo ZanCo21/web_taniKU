@@ -200,7 +200,6 @@ $(document).ready(function (){
         // menampilkan hasil nama provinsi ke input id nama_provinsi
         $("#nama_layanan").val(namaserv + ", " +namalayanan +", " +namaetd + " day, " + "Rp." +namaharga);
     });
-        
 
     // get onkir
     $('select[name="kurir"]').on('change', function(){
@@ -229,6 +228,10 @@ $(document).ready(function (){
             // silahkan pelajari cara menampilkan data json agar lebi paham
             $.each(value1.cost, function(key2, value2){
             // $('select[name="layanan"]').append('<option value="'+ key +'">' + value1.service + '-' + value1.description + '-' +value2.value+ '</option>');
+            let newOption = new Option('Pilih Layanan','Pilih Layanan');
+
+            const select = document.querySelector('select[name="layanan"]'); select.add(newOption,undefined);
+
             $('select[name="layanan"]').append('<option value="'+ key +'" harga_ongkir="'+value2.value+'" service="'+value1.service+'" etd="'+value2.etd+'" description="'+value1.description+'">' + value1.service + '-' + value1.description + ', Rp.' +value2.value+ ',' +value2.etd +" day " +'</option>');
             });
             });
@@ -240,6 +243,11 @@ $(document).ready(function (){
             }
         });
    
+        // $('select[name="kurir"]').on('change', function(){
+        //     let newOption = new Option('Pilih Layanan','Pilih Layanan');
+    
+        //     const select = document.querySelector('select[name="layanan"]'); select.add(newOption,undefined);
+        // });
 // total
         $('select[name="layanan"]').on('change', function(){
             let totalbelanja = $("input[name=harga]").val();

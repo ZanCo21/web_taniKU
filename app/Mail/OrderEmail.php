@@ -45,7 +45,8 @@ class OrderEmail extends Mailable
     {
         return new Content(
             // markdown: 'halaman.sendemail.pembayaran_email',
-            view: 'halaman.invoice',
+            // view: 'halaman.invoice',
+            view: 'halaman.sendemail.invoice',
         );
     }
 
