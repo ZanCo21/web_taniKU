@@ -73,11 +73,10 @@
           <div class="col-md-12">
             <div class="form4">
               <div class="judul">
-                  <p>Konfirmasi pembayaran</p>
+                  <p>Detail Pesanan</p>
                 </div>
-                
                 <div class="information">
-                  <p>Pesan ini hanya berupa konfirmasi dan tidak mempunyai nilai secara financial</p>
+                  <p>Thanks for you order !</p>
                 </div>
               
                 <div class="responsive-tale tabel-pembayaran">

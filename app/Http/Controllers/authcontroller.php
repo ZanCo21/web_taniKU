@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\user;
+use App\Models\User;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
@@ -34,7 +34,7 @@ class authcontroller extends Controller
         // dd($userdata);
         $uuid = Str::uuid()->toString();
 
-        $user =new user();
+        $user =new User();
         $user->name =$userdata->name;
         $user->email =$userdata->email;
         $user->password =Hash::make($uuid.now());
@@ -67,7 +67,7 @@ class authcontroller extends Controller
         // dd($userdata);
         $uuid = Str::uuid()->toString();
 
-        $user =new user();
+        $user =new User();
         $user->name =$userdata->name;
         $user->email =$userdata->email;
         $user->password =Hash::make($uuid.now());

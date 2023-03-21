@@ -47,23 +47,16 @@
             
 
         </form>
-        <div style="display: flex; margin-left: 50%; width: 80%;">
-            <div class="col-md-3">
-                <a class="btn btn-outline-dark" href="{{ route('githublogin') }}" style="text-transform:none; margin-top: 404px; width: 220%; background-color: white; color: black;">
-                  <img  style="margin-bottom:3px; margin-left:15px; width: 20%; margin-top: 5px;" alt="Google sign-in" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" />
-                  Login with Github
-                </a>
-              </div>
-            </div>
-            <div style="display: flex; margin-left: 12%; width: 80%; margin-top: -100px;">
+        <div style="display: flex; margin-left: 21%;">
+            <div style="display: flex;; margin-top: 72%;">
               <div class="col-md-3">
-                <a class="btn btn-outline-dark" href="{{ route('googlelogin') }}" role="button" style="text-transform:none; margin-top: 40px; width: 220%; background-color: white; color: black;">
-                  <img style="margin-bottom:3px; margin-left:10px; width: 20%; margin-top: 5px;" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                <a class="btn btn-outline-dark" href="{{ route('googlelogin') }}" role="button" style="text-transform:none; margin-top: 40px; width: 370%; background-color: white; color: black;">
+                  <img style="margin-bottom:3px; margin-left:10px; width: 10%; margin-top: 5px;" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
                   Login with Google
                 </a>
               </div>
             </div>  
-            <div class="text-center" style="margin-top: 10px">
+            <div class="text-center" style="margin-top:73%">
             ALREADY HAVE AN ACCOUNT? <a href="login">Login</a>
           </div>
         </div>   

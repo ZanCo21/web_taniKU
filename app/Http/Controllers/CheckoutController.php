@@ -18,7 +18,13 @@ class CheckoutController extends Controller
                 $removeItem = Cart::where('user_id', Auth::id())->where('prod_id', $item->prod_id)->first();
                 $removeItem->delete();
             }
+
+            $prod = Produk::where('id', $item->prod_id)->first();
+            $prod->stok = $prod->stok - $item->prod_stok;
+            $prod->update();
         }
+
+
 
         $cartitems = Cart::where('user_id', Auth::id())->get();
         $provinsi = $this->get_province();

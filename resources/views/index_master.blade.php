@@ -40,7 +40,7 @@
               <a class="nav-link active" aria-current="page" href="{{ route('/') }}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active fa fa-shopping-cart" href="{{ url('cart') }}">Cart</a>
+              <a class="nav-link active" href="{{ url('cart') }}">Cart</a>
             </li>
             <li class="nav-item">
               {{-- <a class="nav-link active" href="{{ url('about') }}">About</a> --}}

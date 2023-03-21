@@ -15,9 +15,9 @@
         </div>
         <div class="total">
             <p style="margin-left: 4%; margin-top: 30px; font-size: large;">SubTotal</p>
-            <p style="margin-left: 74%; margin-top: -43px; font-size: large;">Rp.{{ $order->total_harga }}</p>
+            <p style="margin-left: 74%; margin-top: -43px; font-size: large;">Rp.{{ $order->subtotal_produk }}</p>
             <p style="margin-left: 4%; margin-top: -10px; font-size: large;">Shipping<p>
-            <p style="margin-left: 74%; margin-top: -43px; font-size: large;">Rp.{{ $order->total_harga }}<p>
+            <p style="margin-left: 74%; margin-top: -43px; font-size: large;">Rp.{{ $order->ongkos_kirim }}<p>
             <hr>
             <p style="margin-left: 5%; font-size: large; font-weight: bold;">Total</p>
             <p style="margin-left: 74%; margin-top: -45px; font-size: large; color: green; font-weight: bold;">Rp.{{ $order->total_harga }}</p>

@@ -43,9 +43,9 @@
                             <p class="card-text mt-2">{{ $isi->short_description }}</p>
                             </a>
                             @if (Auth::user())
-                            <a href="#" class="btn btn-success addToCartBtn mt-3">Add to Cart</a>
+                            <a href="{{ route('detail.produk',$isi->id) }}" class="btn btn-success mt-3">View Product</a>
                             @else
-                            <a href="/login" class="btn btn-danger mt-3">Add to Cart</a>
+                            <a href="/login" class="btn btn-danger mt-3">View Product</a>
                             @endif
                         </div>
                     </div>
